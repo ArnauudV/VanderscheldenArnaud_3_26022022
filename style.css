@@ -15,7 +15,6 @@ header {
   position: relative;
 }
 
-/* Localisation paris ... */
 .location {
   display: flex;
   align-items: center;
@@ -23,21 +22,18 @@ header {
   background-color: #f0f0f0;
   gap: 0.7rem;
 }
-
 .location h3 {
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
 }
 
-/* Explorez nos restaurants */
 .explo {
   background-color: #f3f3f3;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.2rem 0;
+  padding: 1.5rem 0;
 }
-
 .explo button {
   margin-top: 0.5rem;
   padding: 0.75rem 1.5rem;
@@ -52,10 +48,16 @@ header {
   transition: transform 1000ms;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
-
 .explo button:hover {
   opacity: 90%;
-  border-radius: 2rem;
 }
+.explo h3 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+/* Localisation paris ... */
+/* Explorez nos restaurants */
 
 /*# sourceMappingURL=style.css.map */
