@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&family=Roboto&family=Shrikhand&display=swap');
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+body{
+    margin:0px;
+}
+header{
+    font-family: 'Shrikhand', cursive;
+    text-align: center;
+    box-shadow: 0 0.5rem 1rem grey;
+    padding:0.5rem;
+    position: relative;
+}
+
+.location{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(240,240,240);
+    gap:0.7rem;
+}
+.location h3{
+    font-family: 'Roboto', sans-serif;
+}
