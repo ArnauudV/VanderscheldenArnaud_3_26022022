@@ -61,23 +61,48 @@ header {
   font-size: 1.8rem;
 }
 
+.fonct {
+  counter-reset: stape;
+  margin-left: 10%;
+  margin-right: 10%;
+}
 .fonct ol {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
 }
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
   .fonct ol {
     flex-direction: column;
   }
 }
 .fonct li {
+  position: relative;
   background-color: #f6f6f6;
   padding: 1rem 2rem;
-  border: 1px solid red;
   border-radius: 1rem;
   flex-grow: 1;
+  list-style-type: none;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+.fonct li::before {
+  counter-increment: stape;
+  content: counter(stape);
+  color: white;
+  background-color: purple;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  bottom: 1.2rem;
+  left: -0.8rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+.fonct i {
+  margin-right: 1rem;
+  color: blue;
+  padding: 0.75rem;
 }
 
 /* Localisation paris ... */
