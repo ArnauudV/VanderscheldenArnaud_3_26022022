@@ -1,0 +1,77 @@
+@use "../utils/variables.scss";
+.menus{
+    background-color: #F6F6F6;
+    padding-bottom: 2rem;
+    padding-top:2.5rem;
+    h2{
+        margin-left: 18%;
+        font-size: 1.7rem;
+        font-family: 'Roboto', sans-serif;
+    }
+    &__cartes{
+        margin-left: 18%;
+        margin-right: 18%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap:2rem;
+        @media (max-width: variables.$breakpoint){
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+.carte{
+
+    &__img{
+        
+        height:10rem;
+        background-size: cover;
+        background-position: center;
+        border-radius: 1rem 1rem 0 0;
+    }
+    @for $img from 1 through 4{
+        &__img#{$img}{
+            background-image: url(../../images/menu-#{$img}.jpg);
+        }
+    }
+    &__desc{
+        position: relative;
+        background-color: white;
+        padding:1rem 0;
+        border-radius: 0 0 1rem 1rem;
+        h3, p{
+            margin-top: 0.5rem;
+            margin-left:1rem;
+            font-family: 'Roboto', sans-serif;
+        }
+        p{
+            margin-top:0.3rem;
+        }
+        h3{
+            font-size:1.3rem;
+        }
+        i{
+           font-size: 2.5rem;
+           position: absolute;
+           right:1rem;
+           top:50%;
+           transform:translateY(-50%);
+
+           }
+           .fa-solid{
+               opacity: 0;
+               color:transparent;
+               background: linear-gradient(pink, purple);
+               background-clip:text;
+               -webkit-background-clip: text;
+               transition: ease-in-out 200ms;
+               &:hover{
+                opacity: 1;
+ 
+             
+                }
+           }
+
+    }
+
+
+}

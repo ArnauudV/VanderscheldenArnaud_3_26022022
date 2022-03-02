@@ -1,9 +1,12 @@
-@import "./sass/base";
-@import "./sass/layout/header";
-@import "./sass/layout/location";
-@import "./sass/layout/explo";
-@import "./sass/component/fonct";
-@import "./sass/utils/box";
+@use "./sass/layout/footer.scss";
+@use "./sass/base";
+@use "./sass/layout/header";
+@use "./sass/layout/location";
+@use "./sass/layout/explo";
+@use "./sass/component/fonct";
+@use "./sass/utils/box";
+@use "./sass/layout/menu.scss";
+
 /* Localisation paris ... */
 
 /* Explorez nos restaurants */
