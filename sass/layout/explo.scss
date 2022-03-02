@@ -1,3 +1,5 @@
+@import "../utils/box";
+@import "../utils/zoom";
 .explo{
     background-color: #f3f3f3;
     display: flex;
@@ -17,7 +19,7 @@
         border:none;
         border-radius: 1.4rem;
         transition: transform 1000ms;
-        box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+        @include bs;
     }
     & button:hover{
         opacity: 90%;

@@ -1,0 +1,20 @@
+@import "../utils/box";
+@import "../utils/zoom";
+.fonct {
+    & ol{
+        display: flex;
+        flex-wrap: wrap;
+        gap:2rem;
+        @media (max-width:750px){
+            flex-direction: column;
+        }
+    }
+    & li{
+        background-color: #f6f6f6;
+        padding:1rem 2rem;
+        border:1px solid red;
+        border-radius: 1rem;
+        flex-grow: 1;
+        @include bs;
+    }
+}
