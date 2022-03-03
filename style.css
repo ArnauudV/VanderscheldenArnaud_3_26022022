@@ -40,9 +40,12 @@ h3, p {
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
-  box-shadow: 0 0.5rem 1rem grey;
-  padding: 0.5rem;
+  box-shadow: 0 1rem 1rem lightgrey;
   position: relative;
+  padding: 0.01rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .location {
@@ -50,19 +53,30 @@ header {
   align-items: center;
   justify-content: center;
   background-color: #f0f0f0;
-  gap: 0.7rem;
+  gap: 1rem;
+  padding: 1.25rem 0;
 }
 .location h3 {
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
 }
 
+/* ANIMATIONS*/
+@keyframes apparition {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .explo {
-  background-color: #f3f3f3;
+  background-color: #FBFBFB;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1.5rem 0;
+  font-family: "Roboto", "sans-serif";
 }
 .explo button {
   margin-top: 0.5rem;
@@ -84,13 +98,18 @@ header {
 .explo h3 {
   text-align: center;
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  padding: 1.2rem 0;
+}
+.explo p {
+  padding-top: 1rem;
 }
 
 .fonct {
   counter-reset: stape;
   margin-left: 10%;
   margin-right: 10%;
+  padding: 2rem 0;
 }
 .fonct ol {
   display: flex;
@@ -105,7 +124,7 @@ header {
 .fonct li {
   position: relative;
   background-color: #f6f6f6;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   border-radius: 1rem;
   flex-grow: 1;
   list-style-type: none;
@@ -126,9 +145,9 @@ header {
   border-radius: 50%;
 }
 .fonct i {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   color: blue;
-  padding: 0.75rem;
+  padding: 0.4rem;
 }
 
 .menus {
@@ -148,7 +167,7 @@ header {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   .menus__cartes {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -234,19 +253,61 @@ header {
   font-size: 1.3rem;
 }
 
-.imgresto img {
-  max-width: 100%;
+@keyframes beyblade {
+  0% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+header::before {
+  display: inline-flex;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "\f060";
+  position: absolute;
+  left: 1rem;
+  font-size: 1.5rem;
 }
 
-h2 {
+.imgresto img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  display: block;
+}
+
+.oui {
+  margin: auto;
+  margin-top: -4rem;
+  background: #f6f6f6;
+  width: 85%;
   position: relative;
+  border-radius: 2.5rem 2.5rem 0 0;
+}
+@media (max-width: 1000px) {
+  .oui {
+    width: 100%;
+  }
+}
+.oui h2 {
   font-family: "shrikhand", cursive;
   position: relative;
   background-color: white;
   padding: 0.5rem 0;
   border-radius: 0 0 1rem 1rem;
+  border-radius: 2rem 2rem 0 0;
+  background: #f6f6f6;
+  padding: 2rem 1rem;
 }
-h2::before {
+.oui h2::before {
   background-clip: text;
   -webkit-background-clip: text;
   transition: ease-in-out 200ms;
@@ -266,7 +327,7 @@ h2::before {
   opacity: 1;
   color: black;
 }
-h2::after {
+.oui h2::after {
   background-clip: text;
   -webkit-background-clip: text;
   transition: ease-in-out 200ms;
@@ -287,8 +348,134 @@ h2::after {
   color: transparent;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
 }
-h2:hover::after {
+.oui h2:hover::after {
   opacity: 1;
+}
+
+.resto {
+  background-color: #f6f6f6;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1rem;
+  width: 85%;
+  margin: auto;
+  margin-top: -1.3rem;
+}
+@media (max-width: 1000px) {
+  .resto {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
+.resto h3 {
+  margin-left: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+}
+.resto h3::after {
+  content: "";
+  height: 0.2rem;
+  width: 3rem;
+  top: 1.5rem;
+  left: 0rem;
+  background-color: #99e2d0;
+  display: inline-block;
+  position: absolute;
+}
+.resto__partie {
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+.resto__partie h4, .resto__partie p {
+  padding: 0;
+  margin: 0;
+}
+.resto__partie .menu-piece {
+  animation: apparition 1s;
+  display: flex;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 1rem;
+}
+.resto__partie .menu-piece__desc {
+  padding: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.resto__partie .menu-piece__desc h4, .resto__partie .menu-piece__desc p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.resto__partie .menu-piece__prix {
+  padding: 1rem;
+  margin-left: auto;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+.resto__partie .menu-piece__check {
+  background: #99e2d0;
+  margin-right: -4rem;
+  width: 4rem;
+  border-radius: 0 0.75rem 0.75rem 0;
+  transition: margin-right 500ms;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.resto__partie .menu-piece__check i {
+  background: white;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: grid;
+  place-items: center;
+  color: #99e0d2;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+.resto__partie .menu-piece:hover .menu-piece__check {
+  margin-right: 0;
+  overflow: visible;
+}
+.resto__partie .menu-piece:hover i {
+  animation: beyblade 1s ease;
+  animation-duration: 600ms;
+}
+@keyframes beyblade {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.butresto {
+  width: 85%;
+  margin: auto;
+}
+@media (max-width: 1000px) {
+  .butresto {
+    width: 100%;
+  }
+}
+
+.footresto {
+  margin-left: 8%;
+}
+@media (max-width: 1000px) {
+  .footresto {
+    margin-left: 2.5rem;
+  }
 }
 
 /* Localisation paris ... */

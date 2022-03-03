@@ -4,6 +4,7 @@
     counter-reset: stape;
     margin-left:10%;
     margin-right: 10%;
+    padding:2rem 0;
     & ol{
         display: flex;
         flex-wrap: wrap;
@@ -18,7 +19,7 @@
     & li{
         position: relative;
         background-color: #f6f6f6;
-        padding:1rem 2rem;
+        padding:1rem 1.5rem;
         border-radius: 1rem;
         flex-grow: 1;
         list-style-type: none;
@@ -40,8 +41,8 @@
         
         }
     & i{
-        margin-right: 1rem;
+        margin-right: 0.5rem;
         color:blue;
-        padding:0.75rem;
+        padding:0.4rem;
     }
 }

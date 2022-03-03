@@ -1,11 +1,12 @@
 @use "../utils/mixin";
 @use "../utils/zoom";
 .explo{
-    background-color: #f3f3f3;
+    background-color: #FBFBFB;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding:1.5rem 0;
+    font-family: "Roboto", "sans-serif";
     & button
     {
         margin-top: 0.5rem;
@@ -27,6 +28,11 @@
     & h3{
         text-align: center;
         font-weight: bold;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        padding:1.2rem 0;
+        
+    }
+    & p{
+        padding-top:1rem;
     }
 }
