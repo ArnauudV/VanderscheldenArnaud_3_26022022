@@ -1,4 +1,4 @@
-@use "../utils/box";
+@use "../utils/mixin";
 @use "../utils/zoom";
 .explo{
     background-color: #f3f3f3;
@@ -19,7 +19,7 @@
         border:none;
         border-radius: 1.4rem;
         transition: transform 1000ms;
-        @include box.bs;
+        @include mixin.bs;
     }
     & button:hover{
         opacity: 90%;

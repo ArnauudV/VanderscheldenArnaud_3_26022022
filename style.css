@@ -142,8 +142,8 @@ header {
   font-family: "Roboto", sans-serif;
 }
 .menus__cartes {
-  margin-left: 18%;
-  margin-right: 18%;
+  margin-left: 10%;
+  margin-right: 10%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
@@ -155,7 +155,7 @@ header {
 }
 
 .carte__img {
-  height: 10rem;
+  height: 15rem;
   background-size: cover;
   background-position: center;
   border-radius: 1rem 1rem 0 0;
@@ -175,8 +175,52 @@ header {
 .carte__desc {
   position: relative;
   background-color: white;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   border-radius: 0 0 1rem 1rem;
+}
+.carte__desc::before {
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: ease-in-out 200ms;
+  font-size: 2.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  opacity: 1;
+  color: black;
+}
+.carte__desc::after {
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: ease-in-out 200ms;
+  font-size: 2.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  opacity: 0;
+  color: transparent;
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
+}
+.carte__desc:hover::after {
+  opacity: 1;
 }
 .carte__desc h3, .carte__desc p {
   margin-top: 0.5rem;
@@ -189,22 +233,61 @@ header {
 .carte__desc h3 {
   font-size: 1.3rem;
 }
-.carte__desc i {
+
+.imgresto img {
+  max-width: 100%;
+}
+
+h2 {
+  position: relative;
+  font-family: "shrikhand", cursive;
+  position: relative;
+  background-color: white;
+  padding: 0.5rem 0;
+  border-radius: 0 0 1rem 1rem;
+}
+h2::before {
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: ease-in-out 200ms;
   font-size: 2.5rem;
   position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  opacity: 1;
+  color: black;
 }
-.carte__desc .fa-solid {
-  opacity: 0;
-  color: transparent;
-  background: linear-gradient(pink, purple);
+h2::after {
   background-clip: text;
   -webkit-background-clip: text;
   transition: ease-in-out 200ms;
+  font-size: 2.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  opacity: 0;
+  color: transparent;
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
 }
-.carte__desc .fa-solid:hover {
+h2:hover::after {
   opacity: 1;
 }
 

@@ -1,0 +1,9 @@
+@use "../utils/mixin.scss";
+.imgresto img{
+    max-width: 100%;
+}
+h2{
+    position: relative;
+    font-family: "shrikhand", cursive;
+    @include mixin.animcoeur;
+}
