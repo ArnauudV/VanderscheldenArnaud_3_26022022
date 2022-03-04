@@ -200,16 +200,16 @@ header {
   border-radius: 1rem 1rem 0 0;
 }
 .carte__img1 {
-  background-image: url(././assets/images/menu-1.JPG);
+  background-image: url(../../assets/images/menu-1.JPG);
 }
 .carte__img2 {
-  background-image: url(././assets/images/menu-2.JPG);
+  background-image: url(../../assets/images/menu-2.JPG);
 }
 .carte__img3 {
-  background-image: url(././assets/images/menu-3.JPG);
+  background-image: url(../../assets/images/menu-3.JPG);
 }
 .carte__img4 {
-  background-image: url(././assets/images/menu-4.JPG);
+  background-image: url(../../assets/images/menu-4.JPG);
 }
 .carte__desc {
   position: relative;
