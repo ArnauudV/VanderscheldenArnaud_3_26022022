@@ -45,10 +45,22 @@
         background-position: center;
         border-radius: 1rem 1rem 0 0;
     }
-    @for $img from 1 through 4{
-        &__img#{$img}{
-            background-image: url(../../images/menu-#{$img}.jpg);
-        }
+    // @for $img from 1 through 4{
+    //     &__img#{$img}{
+    //         background-image: url(../../images/menu-#{$img}.jpg);
+    //     }
+    // }
+    &__img1{
+        background-image: url(../../images/menu-1.jpg);
+    }
+    &__img2{
+        background-image: url(../../images/menu-2.jpg);
+    }
+    &__img3{
+        background-image: url(../../images/menu-3.jpg);
+    }
+    &__img4{
+        background-image: url(../../images/menu-4.jpg);
     }
 
     &__desc{
