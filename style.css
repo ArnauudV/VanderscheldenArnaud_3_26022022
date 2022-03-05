@@ -200,16 +200,16 @@ header {
   border-radius: 1rem 1rem 0 0;
 }
 .carte__img1 {
-  background-image: url("../../images/menu1.jpg");
+  background-image: url("images/menu1.jpg");
 }
 .carte__img2 {
-  background-image: url("/images/menu2.jpg");
+  background-image: url("images/menu2.jpg");
 }
 .carte__img3 {
-  background-image: url("/images/menu3.jpg");
+  background-image: url("images/menu3.jpg");
 }
 .carte__img4 {
-  background-image: url("/images/menu4.jpg");
+  background-image: url("images/menu4.jpg");
 }
 .carte__desc {
   position: relative;
