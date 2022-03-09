@@ -64,11 +64,11 @@ header {
 /* ANIMATIONS*/
 @keyframes apparition {
   0% {
-    transform: scale(0);
+    transform: translateY(50%);
     opacity: 0;
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -415,7 +415,7 @@ header::before {
   margin: 0;
 }
 .resto__partie .menu-piece {
-  animation: apparition 1s;
+  animation: apparition 2s;
   display: flex;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   border-radius: 0.75rem;
@@ -423,6 +423,13 @@ header::before {
   text-overflow: ellipsis;
   white-space: nowrap;
   margin: 1rem;
+  animation-fill-mode: both;
+}
+.resto__partie .menu-piece:nth-child(3) {
+  animation-delay: 300ms;
+}
+.resto__partie .menu-piece:nth-child(4) {
+  animation-delay: 400ms;
 }
 .resto__partie .menu-piece__desc {
   padding: 1rem;

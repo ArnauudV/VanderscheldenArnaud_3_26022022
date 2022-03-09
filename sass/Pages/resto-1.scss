@@ -76,30 +76,27 @@ header::before{
             }
         }
         &__partie{
-            color:blue;
             border-radius: 0.75rem;
             overflow: hidden;
             h4, p{
                 padding: 0;
                 margin:0;
             }
-            .menu-piece{
 
-                color: blue;
-                animation: apparition 6s;
+            .menu-piece{
+                @for $i from 3 through 4{
+                    &:nth-child(#{$i}){
+                        animation-delay: 100ms * $i;
+                    }
+                }
+                animation: apparition 2s;
                 display: flex;
                 @include mixin.bs;
                 border-radius: 0.75rem;
                 @include mixin.txtanimreduc;
-                margin:1rem;
-                animation-fill-mode: both;   
-                transform: scale(0);   
-                animation-timing-function: cubic-bezier(.5,1.58,.34,.82);          
-                @for $i from 0 to 8 {
-                    .delay-#{$i} {
-                      animation-delay:  200ms;
-                    }
-                  }
+                margin:1rem;      
+                animation-fill-mode: both;
+
                 &__desc{
                     
                     padding:1rem;
@@ -153,6 +150,8 @@ header::before{
                 }
 
             }
+
+
         }
     
 }
