@@ -76,7 +76,7 @@ header::before{
             }
         }
         &__partie{
-            
+            color:blue;
             border-radius: 0.75rem;
             overflow: hidden;
             h4, p{
@@ -84,13 +84,24 @@ header::before{
                 margin:0;
             }
             .menu-piece{
-                animation: apparition 1s;
+
+                color: blue;
+                animation: apparition 6s;
                 display: flex;
                 @include mixin.bs;
                 border-radius: 0.75rem;
                 @include mixin.txtanimreduc;
                 margin:1rem;
+                animation-fill-mode: both;   
+                transform: scale(0);   
+                animation-timing-function: cubic-bezier(.5,1.58,.34,.82);          
+                @for $i from 0 to 8 {
+                    .delay-#{$i} {
+                      animation-delay:  200ms;
+                    }
+                  }
                 &__desc{
+                    
                     padding:1rem;
                     @include mixin.txtanimreduc;
                     h4, p{
