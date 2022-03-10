@@ -568,6 +568,7 @@ header::before {
 .loading {
   position: fixed;
   display: flex;
+  text-align: center;
   background-color: rgba(255, 255, 255, 0.7);
   height: 100vh;
   top: 0;
@@ -582,14 +583,20 @@ header::before {
   content: "";
   height: 50px;
   width: 50px;
-  margin-left: 40%;
-  margin-top: 120%;
+  margin-left: 48%;
+  margin-top: 25%;
   border-right: 10px solid transparent;
   border-top: 10px solid #FF79DA;
   border-left: 10px solid #FF79DA;
   border-radius: 50%;
   animation: turn 1s ease-in-out;
   animation-iteration-count: 3;
+}
+@media (max-width: 800px) {
+  .loading::after {
+    margin-top: 80%;
+    margin-left: 40%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
