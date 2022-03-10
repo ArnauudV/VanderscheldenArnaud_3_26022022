@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&family=Roboto&family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Lato");
 .footfoot {
   background-color: #353535;
   color: white;
@@ -74,6 +73,22 @@ header h1 {
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+@keyframes byebye {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 .explo {
@@ -548,6 +563,33 @@ header::before {
 
 .headerresto {
   box-shadow: none;
+}
+
+.loading {
+  position: fixed;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  animation: byebye 100ms 2s;
+  animation-fill-mode: both;
+}
+.loading::after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  margin-left: 40%;
+  margin-top: 120%;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #FF79DA;
+  border-left: 10px solid #FF79DA;
+  border-radius: 50%;
+  animation: turn 1s ease-in-out;
+  animation-iteration-count: 3;
 }
 
 /*# sourceMappingURL=style.css.map */

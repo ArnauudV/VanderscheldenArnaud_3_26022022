@@ -1,1 +1,36 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@use "../utils/mixin.scss";
+
+.loading {
+    position: fixed;
+    display: flex;
+    background-color: rgba(255, 255, 255, .7);
+    height: 100vh;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: 1;
+    animation: byebye 100ms 2s;
+    animation-fill-mode: both;
+
+    &::after {
+      content: "";
+      
+      height: 50px;
+      width: 50px;     
+      margin-left:40%;
+      margin-top:120%;
+      
+      border-right: 10px solid transparent;
+      border-top: 10px solid #FF79DA ;
+    //   border-bottom: 9px solid #9356DC;
+      border-left: 10px solid #FF79DA;
+    //   border-right: 9px solid #99E2D0;
+      border-radius: 50%;
+      
+      animation: turn 1s ease-in-out;
+      animation-iteration-count: 3;
+        
+    }
+  }
+  
