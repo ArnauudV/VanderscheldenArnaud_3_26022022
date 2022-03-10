@@ -8,11 +8,13 @@
   margin-left: 10%;
 }
 .footfoot__elements h3 {
+  font-weight: lighter;
   margin-bottom: 1rem;
   font-size: 1.4rem;
   font-family: "Shrikhand", cursive;
 }
 .footfoot__elements p {
+  font-family: "Roboto", sans-serif;
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
 }
@@ -178,6 +180,7 @@ header h1 {
 .fonct i {
   margin-right: 0.5rem;
   padding: 0.4rem;
+  color: grey;
 }
 
 li:hover {
