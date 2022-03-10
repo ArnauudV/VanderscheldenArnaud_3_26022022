@@ -47,7 +47,7 @@ header::before{
 .resto{
     background-color: #f6f6f6;
         padding:2rem 1rem;
-        
+        font-family: Arial, Helvetica, sans-serif;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 1rem;
@@ -158,6 +158,9 @@ header::before{
 .butresto{
     width:85%;
     margin:auto;
+    background-color: #f6f6f6;
+    padding-bottom:4rem;
+    margin-top: -1.5rem;
     @media (max-width:1000px){
         width:100%;
     }
@@ -167,4 +170,7 @@ header::before{
     @media (max-width:1000px){
         margin-left:2.5rem;
     }
+}
+.headerresto{
+    box-shadow: none;
 }

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&family=Roboto&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato");
 .footfoot {
   background-color: #353535;
   color: white;
@@ -40,12 +41,15 @@ h3, p {
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
-  box-shadow: 0 1rem 1rem lightgrey;
+  box-shadow: 0 0.4rem 0.2rem lightgrey;
   position: relative;
   padding: 0.01rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+header h1 {
+  font-weight: 200;
 }
 
 .location {
@@ -105,6 +109,9 @@ header {
 }
 .explo p {
   padding-top: 1rem;
+  padding: 0 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .fonct {
@@ -142,29 +149,34 @@ header {
   counter-increment: stape;
   content: counter(stape);
   color: white;
-  background-color: purple;
+  background-color: #9356DC;
   display: grid;
   place-items: center;
   position: absolute;
-  bottom: 0.9rem;
+  bottom: 1rem;
   left: -0.8rem;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
+  font-size: 0.8rem;
 }
 .fonct i {
   margin-right: 0.5rem;
   padding: 0.4rem;
 }
 
+li:hover {
+  background-color: rgba(147, 86, 220, 0.2);
+}
+
 .menus {
   background-color: #F6F6F6;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
   padding-top: 2.5rem;
 }
 .menus h2 {
   margin-left: 10%;
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
 }
 .menus__cartes {
@@ -187,14 +199,20 @@ header {
   position: absolute;
   display: grid;
   place-items: center;
-  right: 0.5rem;
-  top: 0.5rem;
-  height: 2rem;
-  width: 4rem;
+  right: 0.9rem;
+  top: 0.9rem;
+  height: 1.7rem;
+  width: 4.5rem;
+  font-size: 0.8rem;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #99e2d0;
   color: #278870;
+  border-radius: 0.1rem;
 }
 
+.carte {
+  box-shadow: 0 1.5rem 1rem lightgrey;
+}
 .carte__img {
   height: 15rem;
   background-size: cover;
@@ -202,13 +220,13 @@ header {
   border-radius: 1rem 1rem 0 0;
 }
 .carte__img1 {
-  background-image: url("images/menu1.jpg");
-}
-.carte__img2 {
   background-image: url("images/menu2.jpg");
 }
-.carte__img3 {
+.carte__img2 {
   background-image: url("images/menu3.jpg");
+}
+.carte__img3 {
+  background-image: url("images/menu1.jpg");
 }
 .carte__img4 {
   background-image: url("images/menu4.jpg");
@@ -275,6 +293,23 @@ header {
   font-size: 1.3rem;
 }
 
+@media (max-width: 1000px) {
+  .carte__img {
+    height: 11rem;
+  }
+  .carte__desc {
+    height: 5rem;
+    margin-bottom: -1rem;
+  }
+
+  .menus__cartes {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  .menus h2 {
+    margin-left: 4%;
+  }
+}
 @keyframes beyblade {
   0% {
     transform: rotate(270deg);
@@ -377,6 +412,7 @@ header::before {
 .resto {
   background-color: #f6f6f6;
   padding: 2rem 1rem;
+  font-family: Arial, Helvetica, sans-serif;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 1rem;
@@ -491,6 +527,9 @@ header::before {
 .butresto {
   width: 85%;
   margin: auto;
+  background-color: #f6f6f6;
+  padding-bottom: 4rem;
+  margin-top: -1.5rem;
 }
 @media (max-width: 1000px) {
   .butresto {
@@ -505,6 +544,10 @@ header::before {
   .footresto {
     margin-left: 2.5rem;
   }
+}
+
+.headerresto {
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=style.css.map */
