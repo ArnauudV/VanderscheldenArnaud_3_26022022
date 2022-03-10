@@ -567,7 +567,7 @@ header::before {
 
 .loading {
   position: fixed;
-  display: grid;
+  display: flex;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.7);
   height: 100vh;
@@ -586,8 +586,10 @@ header::before {
   margin-left: 48%;
   margin-top: 25%;
   border-right: 10px solid transparent;
-  border-top: 10px solid #FF79DA;
-  border-left: 10px solid #FF79DA;
+  border-top: 10px solid #99E2D0;
+  border-bottom: 9px solid #9356DC;
+  border-left: 10px solid #99E2D0;
+  border-right: 9px solid #9356DC;
   border-radius: 50%;
   animation: turn 1s ease-in-out;
   animation-iteration-count: 3;
